@@ -11,6 +11,8 @@
 		0E8F00C9259A19580016640F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00C8259A19580016640F /* ContentView.swift */; };
 		0E8F00CB259A195A0016640F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F00CA259A195A0016640F /* Assets.xcassets */; };
 		0E8F00CE259A195A0016640F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F00CD259A195A0016640F /* Preview Assets.xcassets */; };
+		0E8F00DC259A29FE0016640F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00DB259A29FE0016640F /* SettingsView.swift */; };
+		0E8F00E0259A32F20016640F /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00DF259A32F20016640F /* Spotify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +22,8 @@
 		0E8F00CA259A195A0016640F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E8F00CD259A195A0016640F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E8F00CF259A195A0016640F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E8F00D0259A195A0016640F /* spotibar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = spotibar.entitlements; sourceTree = "<group>"; };
+		0E8F00DB259A29FE0016640F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0E8F00DF259A32F20016640F /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +58,10 @@
 			children = (
 				0E8F00C6259A19580016640F /* spotibarApp.swift */,
 				0E8F00C8259A19580016640F /* ContentView.swift */,
+				0E8F00DB259A29FE0016640F /* SettingsView.swift */,
+				0E8F00DF259A32F20016640F /* Spotify.swift */,
 				0E8F00CA259A195A0016640F /* Assets.xcassets */,
 				0E8F00CF259A195A0016640F /* Info.plist */,
-				0E8F00D0259A195A0016640F /* spotibar.entitlements */,
 				0E8F00CC259A195A0016640F /* Preview Content */,
 			);
 			path = spotibar;
@@ -140,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8F00DC259A29FE0016640F /* SettingsView.swift in Sources */,
 				0E8F00C9259A19580016640F /* ContentView.swift in Sources */,
+				0E8F00E0259A32F20016640F /* Spotify.swift in Sources */,
 				0E8F00C7259A19580016640F /* spotibarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +274,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = spotibar/spotibar.entitlements;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = spotibar/spotibarDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"spotibar/Preview Content\"";
@@ -292,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = spotibar/spotibar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

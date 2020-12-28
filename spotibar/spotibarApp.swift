@@ -12,7 +12,7 @@ struct spotibarApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         Settings {
-            ContentView()
+            SettingsView()
         }
     }
 }
@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         let view = NSHostingView(rootView: ContentView())
-        view.frame = NSRect(x: 0, y: 0, width: 200, height: 200)
+        view.frame = NSRect(x: 0, y: 0, width: 300, height: 500)
         let menuItem = NSMenuItem()
         menuItem.view = view
         let menu = NSMenu()
