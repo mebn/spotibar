@@ -1,2 +1,2 @@
 # spotibar
-Spotify in your MacOS menu bar!
+Make media keys only control spotify on MacOS!
