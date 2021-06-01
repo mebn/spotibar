@@ -8,22 +8,6 @@
 import SwiftUI
 import ScriptingBridge
 
-extension String {
-    func load() -> NSImage {
-        do {
-            guard let url = URL(string: self) else {
-                return NSImage()
-            }
-            
-            let data: Data = try Data(contentsOf: url)
-            
-            return NSImage(data: data) ?? NSImage()
-        } catch {}
-        
-        return NSImage()
-    }
-}
-
 struct ContentView: View {
     let spotify = SBApplication(bundleIdentifier: "com.spotify.client")! as SpotifyApplication
     
@@ -35,18 +19,20 @@ struct ContentView: View {
         self.buttonImage = spotify.playerState == .playing ? "play.fill" : "pause.fill"
     }
     
+    
     var body: some View {
         ZStack {
             Image(nsImage: spotify.currentTrack!.artworkUrl!.load())
                 .resizable()
-                .frame(width: 240, height: 240)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 240)
                 .blur(radius: blurRadius, opaque: true)
                 .cornerRadius(5)
                 .onHover {hover in
                     withAnimation {
                         isHover = hover
+                        self.blurRadius = hover ? 5 : 0
                     }
-                    self.blurRadius = hover ? 5 : 0
                 }
             
             if isHover {
@@ -61,12 +47,11 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "backward.fill")
                                 .resizable()
-                                .frame(width: 25, height: 25, alignment: .center)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25, alignment: .center)
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding()
-                        
-                        Spacer()
                         
                         // play / pause button
                         Button(action: {
@@ -80,12 +65,11 @@ struct ContentView: View {
                         }) {
                             Image(systemName: buttonImage)
                                 .resizable()
-                                .frame(width: 35, height: 35, alignment: .center)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 35, alignment: .center)
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding()
-                        
-                        Spacer()
                         
                         // next track
                         Button(action: {
@@ -93,11 +77,15 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "forward.fill")
                                 .resizable()
-                                .frame(width: 25, height: 25, alignment: .center)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 25, alignment: .center)
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding()
                     }
+                    
+                    Text("")
+                        .padding()
                 } // vstack
                 .transition(.opacity)
             }
@@ -108,5 +96,21 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension String {
+    func load() -> NSImage {
+        do {
+            guard let url = URL(string: self) else {
+                return NSImage()
+            }
+            
+            let data: Data = try Data(contentsOf: url)
+            
+            return NSImage(data: data) ?? NSImage()
+        } catch {}
+        
+        return NSImage()
     }
 }

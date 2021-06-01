@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E35B22326663E6D00CDD4F3 /* MediaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */; };
+		0E35B22526663E7200CDD4F3 /* EventTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35B22426663E7200CDD4F3 /* EventTap.swift */; };
+		0E35B229266644E400CDD4F3 /* AppWhitelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E35B228266644E400CDD4F3 /* AppWhitelist.plist */; };
 		0E8F00C7259A19580016640F /* spotibarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00C6259A19580016640F /* spotibarApp.swift */; };
 		0E8F00C9259A19580016640F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00C8259A19580016640F /* ContentView.swift */; };
 		0E8F00CB259A195A0016640F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F00CA259A195A0016640F /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaKeys.swift; path = "../../../Downloads/mediakeys-master/MediaKeys/MediaKeys.swift"; sourceTree = "<group>"; };
+		0E35B22426663E7200CDD4F3 /* EventTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTap.swift; path = "../../../Downloads/mediakeys-master/MediaKeys/EventTap.swift"; sourceTree = "<group>"; };
+		0E35B228266644E400CDD4F3 /* AppWhitelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppWhitelist.plist; path = "../../../Downloads/mediakeys-master/MediaKeys/AppWhitelist.plist"; sourceTree = "<group>"; };
 		0E8F00C3259A19580016640F /* spotibar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotibar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8F00C6259A19580016640F /* spotibarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotibarApp.swift; sourceTree = "<group>"; };
 		0E8F00C8259A19580016640F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,7 @@
 			children = (
 				0E8F00C5259A19580016640F /* spotibar */,
 				0E8F00C4259A19580016640F /* Products */,
+				0EBC5AC0266634FA009BE101 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +63,9 @@
 		0E8F00C5259A19580016640F /* spotibar */ = {
 			isa = PBXGroup;
 			children = (
+				0E35B228266644E400CDD4F3 /* AppWhitelist.plist */,
+				0E35B22426663E7200CDD4F3 /* EventTap.swift */,
+				0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */,
 				0E8F00C6259A19580016640F /* spotibarApp.swift */,
 				0E8F00C8259A19580016640F /* ContentView.swift */,
 				0E8F00DB259A29FE0016640F /* SettingsView.swift */,
@@ -73,6 +83,13 @@
 				0E8F00CD259A195A0016640F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0EBC5AC0266634FA009BE101 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +119,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0E8F00C2259A19580016640F = {
 						CreatedOnToolsVersion = 12.3;
@@ -132,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E35B229266644E400CDD4F3 /* AppWhitelist.plist in Resources */,
 				0E8F00CE259A195A0016640F /* Preview Assets.xcassets in Resources */,
 				0E8F00CB259A195A0016640F /* Assets.xcassets in Resources */,
 			);
@@ -146,7 +164,9 @@
 			files = (
 				0E8F00DC259A29FE0016640F /* SettingsView.swift in Sources */,
 				0E8F00C9259A19580016640F /* ContentView.swift in Sources */,
+				0E35B22526663E7200CDD4F3 /* EventTap.swift in Sources */,
 				0E8F00E0259A32F20016640F /* Spotify.swift in Sources */,
+				0E35B22326663E6D00CDD4F3 /* MediaKeys.swift in Sources */,
 				0E8F00C7259A19580016640F /* spotibarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,13 +225,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -260,12 +281,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -275,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = spotibar/spotibarDebug.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"spotibar/Preview Content\"";
@@ -299,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = spotibar/spotibar.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"spotibar/Preview Content\"";
