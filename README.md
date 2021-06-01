@@ -16,4 +16,4 @@ Imagine you're listen to music while programming. You look up a tutorial for som
 1. Open/unzip `spotibar.app.zip`
 1. Drag `spotibar.app` to your applications folder
 1. Open `settings.app` -> Security & Privacy -> Privacy -> Accessibility and toggle spotibar.app
-1. Have fun!
+1. Open `spotibar.app` and have fun!
