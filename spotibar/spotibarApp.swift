@@ -44,13 +44,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, MediaKeysDelegate {
         let menu = NSMenu()
         menu.items = [
             title,
-            NSMenuItem(title: "Github 💻", action: #selector(handleOpenUpdateWindow(_:)), keyEquivalent: ""),
+            NSMenuItem(title: "Visit my github 🧑‍💻", action: #selector(handleOpenUpdateWindow(_:)), keyEquivalent: ""),
             NSMenuItem.separator(),
             NSMenuItem(title: "Quit 👋", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q"),
         ]
         
         statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        statusBarItem?.button?.image = NSImage(systemSymbolName: "play.fill", accessibilityDescription: "")
+        statusBarItem?.button?.image = NSImage(named: "logoTemplate")
         statusBarItem?.menu = menu
     }
     

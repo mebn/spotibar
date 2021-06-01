@@ -61,12 +61,12 @@
 		0E8F00C5259A19580016640F /* spotibar */ = {
 			isa = PBXGroup;
 			children = (
-				0E102B4F26668A780018315C /* EventTap.swift */,
-				0E102B5026668A780018315C /* MediaKeys.swift */,
 				0E8F00C6259A19580016640F /* spotibarApp.swift */,
-				0E8F00C8259A19580016640F /* ContentView.swift */,
 				0E8F00DB259A29FE0016640F /* SettingsView.swift */,
+				0E8F00C8259A19580016640F /* ContentView.swift */,
 				0E8F00DF259A32F20016640F /* Spotify.swift */,
+				0E102B5026668A780018315C /* MediaKeys.swift */,
+				0E102B4F26668A780018315C /* EventTap.swift */,
 				0E8F00CA259A195A0016640F /* Assets.xcassets */,
 				0E8F00CF259A195A0016640F /* Info.plist */,
 				0E8F00CC259A195A0016640F /* Preview Content */,
