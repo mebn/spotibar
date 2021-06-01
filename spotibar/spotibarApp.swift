@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MediaKeys
 import ScriptingBridge
 
 @main

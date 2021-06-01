@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E35B22326663E6D00CDD4F3 /* MediaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */; };
-		0E35B22526663E7200CDD4F3 /* EventTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35B22426663E7200CDD4F3 /* EventTap.swift */; };
-		0E35B229266644E400CDD4F3 /* AppWhitelist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E35B228266644E400CDD4F3 /* AppWhitelist.plist */; };
+		0E102B5226668A780018315C /* EventTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E102B4F26668A780018315C /* EventTap.swift */; };
+		0E102B5326668A780018315C /* MediaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E102B5026668A780018315C /* MediaKeys.swift */; };
 		0E8F00C7259A19580016640F /* spotibarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00C6259A19580016640F /* spotibarApp.swift */; };
 		0E8F00C9259A19580016640F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F00C8259A19580016640F /* ContentView.swift */; };
 		0E8F00CB259A195A0016640F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E8F00CA259A195A0016640F /* Assets.xcassets */; };
@@ -19,9 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaKeys.swift; path = "../../../Downloads/mediakeys-master/MediaKeys/MediaKeys.swift"; sourceTree = "<group>"; };
-		0E35B22426663E7200CDD4F3 /* EventTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTap.swift; path = "../../../Downloads/mediakeys-master/MediaKeys/EventTap.swift"; sourceTree = "<group>"; };
-		0E35B228266644E400CDD4F3 /* AppWhitelist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppWhitelist.plist; path = "../../../Downloads/mediakeys-master/MediaKeys/AppWhitelist.plist"; sourceTree = "<group>"; };
+		0E102B4F26668A780018315C /* EventTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTap.swift; sourceTree = "<group>"; };
+		0E102B5026668A780018315C /* MediaKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaKeys.swift; sourceTree = "<group>"; };
 		0E8F00C3259A19580016640F /* spotibar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotibar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8F00C6259A19580016640F /* spotibarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotibarApp.swift; sourceTree = "<group>"; };
 		0E8F00C8259A19580016640F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,9 +61,8 @@
 		0E8F00C5259A19580016640F /* spotibar */ = {
 			isa = PBXGroup;
 			children = (
-				0E35B228266644E400CDD4F3 /* AppWhitelist.plist */,
-				0E35B22426663E7200CDD4F3 /* EventTap.swift */,
-				0E35B22226663E6D00CDD4F3 /* MediaKeys.swift */,
+				0E102B4F26668A780018315C /* EventTap.swift */,
+				0E102B5026668A780018315C /* MediaKeys.swift */,
 				0E8F00C6259A19580016640F /* spotibarApp.swift */,
 				0E8F00C8259A19580016640F /* ContentView.swift */,
 				0E8F00DB259A29FE0016640F /* SettingsView.swift */,
@@ -149,7 +146,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E35B229266644E400CDD4F3 /* AppWhitelist.plist in Resources */,
 				0E8F00CE259A195A0016640F /* Preview Assets.xcassets in Resources */,
 				0E8F00CB259A195A0016640F /* Assets.xcassets in Resources */,
 			);
@@ -162,11 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E102B5326668A780018315C /* MediaKeys.swift in Sources */,
 				0E8F00DC259A29FE0016640F /* SettingsView.swift in Sources */,
 				0E8F00C9259A19580016640F /* ContentView.swift in Sources */,
-				0E35B22526663E7200CDD4F3 /* EventTap.swift in Sources */,
 				0E8F00E0259A32F20016640F /* Spotify.swift in Sources */,
-				0E35B22326663E6D00CDD4F3 /* MediaKeys.swift in Sources */,
+				0E102B5226668A780018315C /* EventTap.swift in Sources */,
 				0E8F00C7259A19580016640F /* spotibarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
