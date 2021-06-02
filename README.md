@@ -18,7 +18,7 @@ Follow these steps to install `spotibar.app`. The app should work (although not 
 1. Open/unzip `spotibar.app.zip`
 1. Drag `spotibar.app` to your applications folder
 1. Open `settings.app` -> Security & Privacy -> Privacy -> Accessibility and toggle spotibar.app
-1. Open `spotibar.app` and have fun!
+1. Open `spotibar.app` from the application folder and have fun!
 
 ### How to add as login item
 If you want `spotibar.app` to open on login, follow these steps:
