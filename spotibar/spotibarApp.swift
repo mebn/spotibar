@@ -8,6 +8,8 @@
 import SwiftUI
 import ScriptingBridge
 
+var isTurnedOn = true
+
 @main
 struct spotibarApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -30,21 +32,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, MediaKeysDelegate {
     }
     
     func handleMenuBar() {
-        if spotify.playerState == .playing {
-            
-        }
-//        let view = NSHostingView(rootView: ContentView())
-//        view.frame = NSRect(x: 0, y: 0, width: 250, height: 240)
-//        let menuItem = NSMenuItem()
-//        menuItem.view = view
-        
         let title = NSMenuItem()
-        title.title = "Spotibar 🔊"
+        title.title = "Spotibar"
+        
+        let toggle = NSMenuItem()
+        toggle.title = "Is turned on"
+        toggle.action = #selector(handleToggle(_:))
+        toggle.state = NSControl.StateValue.on
         
         let menu = NSMenu()
         menu.items = [
             title,
-            NSMenuItem(title: "Visit my github 🧑‍💻", action: #selector(handleOpenUpdateWindow(_:)), keyEquivalent: ""),
+            NSMenuItem.separator(),
+            toggle,
+            NSMenuItem(title: "Check for updates...", action: #selector(handleCheckVersion(_:)), keyEquivalent: ""),
+            NSMenuItem(title: "Go to my github!", action: #selector(handleGithub(_:)), keyEquivalent: ""),
+//            NSMenuItem(title: "Preferences", action: #selector(NSApp.), keyEquivalent: ","),
             NSMenuItem.separator(),
             NSMenuItem(title: "Quit 👋", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q"),
         ]
@@ -59,24 +62,42 @@ class AppDelegate: NSObject, NSApplicationDelegate, MediaKeysDelegate {
     }
     
     func mediaKeys(_ mediaKeys: MediaKeys, shouldInterceptKeyWithKeyCode keyCode: Int32) -> Bool {
-        switch keyCode {
-            case NX_KEYTYPE_PLAY:
-                spotify.playpause?()
-                return true
-            case NX_KEYTYPE_FAST:
-                spotify.nextTrack?()
-                return true
-            case NX_KEYTYPE_REWIND:
-                spotify.previousTrack?()
-                return true
-            default:
-                break
+        if isTurnedOn {
+            switch keyCode {
+                case NX_KEYTYPE_PLAY:
+                    spotify.playpause?()
+                    return true
+                case NX_KEYTYPE_FAST:
+                    spotify.nextTrack?()
+                    return true
+                case NX_KEYTYPE_REWIND:
+                    spotify.previousTrack?()
+                    return true
+                default:
+                    break
+            }
         }
+        
         return false
     }
     
-    @objc func handleOpenUpdateWindow(_ sender: NSMenuItem) {
-        let url = URL(string: "https://github.com/mebn/spotibar")!
+    @IBAction func handleToggle(_ sender: NSMenuItem) {
+        isTurnedOn = !isTurnedOn
+        
+        if isTurnedOn {
+            sender.state = NSControl.StateValue.on
+        } else {
+            sender.state = NSControl.StateValue.off
+        }
+    }
+    
+    @objc func handleCheckVersion(_ sender: NSMenuItem) {
+        let url = URL(string: "https://github.com/mebn/spotibar/releases/latest")!
+        NSWorkspace.shared.open(url)
+    }
+    
+    @objc func handleGithub(_ sender: NSMenuItem) {
+        let url = URL(string: "https://github.com/mebn/")!
         NSWorkspace.shared.open(url)
     }
 }
